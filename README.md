@@ -54,7 +54,7 @@ To prevent overfitting on the small dataset (110 patients), I applied:
 * Horizontal & Vertical Flips
 * This forces the model to learn tumor *features* rather than memorizing *locations*.
 
-## 📊 Results (After 35 Epochs)
+## 📊 Results (After 28 Epochs)
 
 The model was evaluated on a held-out test set.
 
@@ -76,7 +76,8 @@ The model was evaluated on a held-out test set.
    macro avg     0.9359    0.9193    0.9274  25755648
 weighted avg     0.9972    0.9972    0.9972  25755648
 
-🛠️ Tech Stack
+
+**## 🛠️ Tech Stack**
 Framework: PyTorch
 
 Augmentation: Albumentations
@@ -87,7 +88,7 @@ Visualization: Matplotlib, OpenCV
 
 Environment: Kaggle Kernels / Jupyter Notebook
 
-🚀 How to Run
+**## 🚀 How to Run**
 Clone the repository.
 
 Install dependencies: pip install torch albumentations opencv-python matplotlib.
@@ -96,8 +97,8 @@ Download the dataset from Kaggle and update the path in the notebook.
 
 Run brain-mri-unet.ipynb.
 
-👤 Author
-M WASIF YASEEN
+**👤 Author
+M WASIF YASEEN**
 
 
 
