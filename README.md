@@ -11,9 +11,9 @@ Below are examples of the model's performance on unseen test data. The red areas
 
 <table>
   <tr>
-    <td align="center"><img src="heatmapresults.png" alt="Result Example 1" width="100%"></td>
-    <td align="center"><img src="heatmapresults1.png" alt="Result Example 2" width="100%"></td>
-    <td align="center"><img src="heatmapresults2.png" alt="Result Example 3" width="100%"></td>
+    <td align="center"><img src="heatmap_results.png" alt="Result Example 1" width="100%"></td>
+    <td align="center"><img src="heatmap-results1.png" alt="Result Example 2" width="100%"></td>
+    <td align="center"><img src="heatmap-results2.png" alt="Result Example 3" width="100%"></td>
   </tr>
 </table>
 <p align="center"><i>(Within each image above: Left=Original MRI, Middle=Ground Truth Label, Right=Model Prediction Heatmap)</i></p>
