@@ -1,0 +1,12 @@
+# Ignore the virtual environment folder
+venv/
+env/
+.env
+
+# Ignore large model files (if > 100MB)
+*.pth
+*.pt
+
+# Ignore python cache
+__pycache__/
+*.pyc
