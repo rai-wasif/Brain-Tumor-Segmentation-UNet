@@ -2,12 +2,14 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange)
+![FastAPI](https://img.shields.io/badge/FastAPI-High%20Performance-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-UI-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 A semantic segmentation model designed to automatically identify Lower-Grade Gliomas (LGG) in brain MRI scans. This project implements a **U-Net architecture** from scratch in PyTorch, tackling extreme class imbalance to achieve high sensitivity (Recall) for medical diagnostics.
 
 ### 🔎 Model Predictions (Visualizing Confidence)
-Below are examples of the model's performance on unseen test data. The red areas in the heatmap indicate high model confidence in the presence of a tumor.
+Below are examples of the model's performance on unseen test data during training. The red areas in the heatmap indicate high model confidence in the presence of a tumor.
 
 <table>
   <tr>
@@ -27,6 +29,33 @@ Manual segmentation of brain tumors is time-consuming and prone to inter-observe
 
 **The Solution:**
 I engineered a deep learning pipeline that prioritizes **Recall** (finding the cancer) over pure accuracy. By using a custom **Dice Loss** function and heavy data augmentation, the model learns to delineate exact tumor boundaries despite the small size of the targets.
+
+## 🌐 Deployment & MLOps (FastAPI + Streamlit)
+
+To bridge the gap between research and production, I deployed the model using a microservices architecture.
+
+### ⚡ Backend: Why FastAPI?
+I chose **FastAPI** over Flask/Django for serving the model due to:
+* **Asynchronous Performance:** FastAPI supports `async`/`await`, allowing the server to handle multiple inference requests simultaneously without blocking (crucial for heavy deep learning tasks).
+* **Data Validation:** Automatic validation using Python type hints ensures that image payloads are correctly formatted before they reach the model.
+* **Auto-Documentation:** Generates interactive Swagger UI (`/docs`) automatically, simplifying API testing.
+
+### 🖥️ Frontend: Live Demo via Streamlit
+A user-friendly web interface was built using **Streamlit** to allow radiologists/users to upload MRI scans and get real-time segmentation overlays.
+
+**📸 Real-Time Testing Screenshots:**
+<table>
+  <tr>
+    <td align="center"><b>Test Case 1</b><br><img src="testcase.png" width="100%"></td>
+    <td align="center"><b>Test Case 2</b><br><img src="testcase1.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Test Case 3</b><br><img src="testcase2.png" width="100%"></td>
+    <td align="center"><b>Test Case 4</b><br><img src="testcase3.png" width="100%"></td>
+  </tr>
+</table>
+
+---
 
 ## 📂 Dataset
 
@@ -77,30 +106,51 @@ The model was evaluated on a held-out test set.
 weighted avg     0.9972    0.9972    0.9972  25755648
 
 
-**## 🛠️ Tech Stack**
-Framework: PyTorch
+###   🛠️ Tech Stack
+'''text
+ Deep Learning: PyTorch, Albumentations
 
-Augmentation: Albumentations
+Deployment: FastAPI (Backend), Streamlit (Frontend), Uvicorn
 
-Tracking: TQDM (Progress Bars)
+Computer Vision: OpenCV, PIL
 
-Visualization: Matplotlib, OpenCV
+Environment: Kaggle Kernels (Training), Local GPU (Inference)
 
-Environment: Kaggle Kernels / Jupyter Notebook
+**🚀 How to Run
+1. Clone the repository
+Bash
 
-**## 🚀 How to Run**
-Clone the repository.
+git clone https://github.com/rai-wasif/Brain-Tumor-Segmentation-UNet.git
+cd Brain-Tumor-Segmentation-UNet
+2. Run the Web App (Deployment)
+Navigate to the deployment folder and install dependencies:
 
-Install dependencies: pip install torch albumentations opencv-python matplotlib.
+Bash
 
-Download the dataset from Kaggle and update the path in the notebook.
+cd deployment
+pip install -r requirements.txt
+Start the Backend (FastAPI):
 
-Run brain-mri-unet.ipynb.
+Bash
 
-**👤 Author
-M WASIF YASEEN**
+uvicorn main:app --reload
+Start the Frontend (Streamlit) in a new terminal:
 
+Bash
 
+streamlit run frontend.py
+3. Training the Model (Optional)
+If you wish to retrain the model from scratch:
 
+Download the dataset from Kaggle.
 
+Update the path in brain-mri-unet.ipynb.
 
+Run the Jupyter Notebook.
+
+👤 Author
+M WASIF YASEEN
+
+GitHub: rai-wasif
+
+Email: raimuhammadwasif@gmail.com**
