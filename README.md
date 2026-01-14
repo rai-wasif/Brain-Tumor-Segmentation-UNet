@@ -107,7 +107,7 @@ weighted avg     0.9972    0.9972    0.9972  25755648 ```
 
 
 
-**###   🛠️ Tech Stack**
+###   🛠️ Tech Stack
 ```text
  Deep Learning: PyTorch, Albumentations
 
@@ -118,7 +118,7 @@ Computer Vision: OpenCV, PIL
 Environment: Kaggle Kernels (Training), Local GPU (Inference)  ```
 
 
-**### 🚀 How to Run**
+### 🚀 How to Run
 ```text
 
 **1. Clone the repository**
