@@ -1,4 +1,3 @@
-````markdown
 # 🧠 Brain Tumor Segmentation (U-Net)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
@@ -104,8 +103,8 @@ These techniques improve generalization and prevent overfitting.
     accuracy                         0.9972  25755648
    macro avg     0.9359    0.9193    0.9274  25755648
 weighted avg     0.9972    0.9972    0.9972  25755648
-````
 
+```
 ---
 
 ## 🛠️ Tech Stack
