@@ -103,54 +103,55 @@ The model was evaluated on a held-out test set.
 
     accuracy                         0.9972  25755648
    macro avg     0.9359    0.9193    0.9274  25755648
-weighted avg     0.9972    0.9972    0.9972  25755648
+weighted avg     0.9972    0.9972    0.9972  25755648 ```
 
 
-###   🛠️ Tech Stack
-'''text
+
+**###   🛠️ Tech Stack**
+```text
  Deep Learning: PyTorch, Albumentations
 
 Deployment: FastAPI (Backend), Streamlit (Frontend), Uvicorn
 
 Computer Vision: OpenCV, PIL
 
-Environment: Kaggle Kernels (Training), Local GPU (Inference)
+Environment: Kaggle Kernels (Training), Local GPU (Inference)  ```
 
-**🚀 How to Run
-1. Clone the repository
+
+**### 🚀 How to Run**
+```text
+
+**1. Clone the repository**
 Bash
 
 git clone https://github.com/rai-wasif/Brain-Tumor-Segmentation-UNet.git
 cd Brain-Tumor-Segmentation-UNet
-2. Run the Web App (Deployment)
+
+**2. Run the Web App (Deployment)**
 Navigate to the deployment folder and install dependencies:
 
 Bash
-
 cd deployment
 pip install -r requirements.txt
 Start the Backend (FastAPI):
 
 Bash
-
 uvicorn main:app --reload
 Start the Frontend (Streamlit) in a new terminal:
 
 Bash
-
 streamlit run frontend.py
-3. Training the Model (Optional)
+
+**3. Training the Model (Optional)**
 If you wish to retrain the model from scratch:
 
 Download the dataset from Kaggle.
 
-Update the path in brain-mri-unet.ipynb.
+Run the Jupyter Notebook.  ```
 
-Run the Jupyter Notebook.
+## 👤 Author
+```text
+**M Wasif Yaseen**  
+GitHub: https://github.com/rai-wasif  
+Email: raimuhammadwasif@gmail.com
 
-👤 Author
-M WASIF YASEEN
-
-GitHub: rai-wasif
-
-Email: raimuhammadwasif@gmail.com**
